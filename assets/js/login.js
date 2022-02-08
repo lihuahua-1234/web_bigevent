@@ -32,15 +32,18 @@ $(function(){
     })
     //监听注册表单的提交事件
     //请求的第一中方法.on
-    $('#form_reg').on('submit', function(e){
+    $('#form_reg').on('submit', function(e) {   
 
         //1.阻止默认的提交行为
         e.preventDefault()
 
         //2.发起ajax的post请求
-        var data = {username:$('#form_reg[name=username]').val() ,
+        var data = {
+                            //#form_reg [name=username] #form_reg 后面一点要空格一下,不能紧贴着
+        username: $('#form_reg [name=username]').val() ,
 
-        password:$('#form_reg[name=password]').val()} 
+        password: $('#form_reg [name=password]').val()
+    } 
 
         $.post('/api/reguser',data, function(res){
             
