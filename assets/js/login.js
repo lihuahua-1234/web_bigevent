@@ -31,6 +31,7 @@ $(function(){
 
           // 还需要拿到密码框中的内容
           //属性查找的方式
+        //   var pwd =  $('.reg-box input').val()
           var pwd =  $('.reg-box [name=password]').val()
 
           // 然后进行移除等于的判断
@@ -48,6 +49,8 @@ $(function(){
         e.preventDefault()
 
         // 2.发起ajax的post请求
+        // var data =  { username: $(this).serialize(), 
+        // password:$(this).serialize() }
         var data =  { username: $('#form_reg [name=username]').val(), 
         password:$('#form_reg [name=password]').val() }
 
