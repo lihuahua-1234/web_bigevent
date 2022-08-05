@@ -37,6 +37,7 @@ $(function () {
         var file = e.target.files[0]
         // 2. 将文件，转化为路径
         var newImgURL = URL.createObjectURL(file)
+        console.log(newImgURL)
         // 3. 重新初始化裁剪区域
         $image
         .cropper('destroy')      // 销毁旧的裁剪区域 cropper插件的名称
